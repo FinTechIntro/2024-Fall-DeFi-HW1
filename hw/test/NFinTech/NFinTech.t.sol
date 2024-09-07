@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import "../../src/NFinTech/NFinTech.sol";
+import {NFinTech, IERC721TokenReceiver, IERC721} from "../../src/NFinTech/NFinTech.sol";
 
 /// @title NFinTech Test
 /// @author Louis Tsai

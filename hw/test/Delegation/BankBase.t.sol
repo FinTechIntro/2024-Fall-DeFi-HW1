@@ -28,8 +28,7 @@ contract BankBaseTest is Test {
         victim = makeAddr("victim");
         deal(victim, 100 ether);
 
-        user = makeAddr("user");
-        deal(user, 1 ether);
+        deal(address(this), 1 ether);
 
         // Contract
         bank = new Bank();

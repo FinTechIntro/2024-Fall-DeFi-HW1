@@ -17,6 +17,12 @@ interface IERC721 {
     event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
 }
 
+interface IERC721TokenReceiver {
+    function onERC721Received(address operator, address from, uint256 tokenId, bytes calldata data)
+        external
+        returns (bytes4);
+}
+
 
 contract NFinTech is IERC721 {
     string private _name;

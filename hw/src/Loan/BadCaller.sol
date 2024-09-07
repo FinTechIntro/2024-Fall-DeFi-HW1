@@ -71,8 +71,8 @@ contract BadCaller {
         return loanToken.balanceOf(address(this));
     }
 
-    /// @notice Provides a flash loan with zero fees for new users
-    /// @dev Charges a fee for users who have previously used the platform, checks for repayment
+    /// @notice Provides a flash loan with zero fees for old users
+    /// @dev Charges a fee for new users who have never used the platform, checks for repayment
     /// @param target The address to which the funds will be sent and that will execute the transaction
     /// @param amount The amount of the loan
     /// @param data The call data to be sent to the `target` address
